@@ -1,0 +1,20 @@
+version = 1
+
+test_patterns = [
+  'integration_tests/**',
+  'pkg/test/**',
+  '**/*_test.go',
+]
+
+exclude_patterns = [
+  'vendor/**',
+]
+
+[[ analyzers ]]
+  name = 'go'
+  enabled = true
+
+  [analyzers.meta]
+  import_path = 'github.com/sanketsaurav/spinnaker-operator'
+  dependencies_vendored = true
+
